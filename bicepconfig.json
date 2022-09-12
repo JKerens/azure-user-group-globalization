@@ -1,0 +1,58 @@
+{
+    "analyzers": {
+        "core": {
+            "enabled": true,
+            "verbose": false,
+            "rules": {
+                "adminusername-should-not-be-literal": {
+                    "level": "error"
+                },
+                "no-hardcoded-env-urls": {
+                    "level": "error"
+                },
+                "no-unused-params": {
+                    "level": "warning"
+                },
+                "no-unused-vars": {
+                    "level": "warning"
+                },
+                "prefer-interpolation": {
+                    "level": "warning"
+                },
+                "secure-parameter-default": {
+                    "level": "warning"
+                },
+                "simplify-interpolation": {
+                    "level": "warning"
+                },
+                "explicit-values-for-loc-params":{
+                    "level": "off"
+                }
+            }
+        }
+    },
+    "moduleAliases": {
+        "ts": {
+            "CoreSpecs": {
+                "subscription": "<subscription-guid>",
+                "resourceGroup": "<resource-group-name>"
+              }
+        },
+        "br": {
+            "myRegistry":{
+                "registry": "<my-acr>.azurecr.io"
+            },
+            "hcssTemplates":{
+                "registry": "<my-acr>.azurecr.io",
+                "modulePath": "<my-relative-path>bicep/modules"
+            }
+        }
+    },
+    "cloud": {
+        "credentialPrecedence": [
+            "AzurePowerShell",
+            "AzureCLI",
+            "VisualStudioCode"
+        ]
+    }
+}
